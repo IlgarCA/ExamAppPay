@@ -1,0 +1,21 @@
+﻿@model List<FeaturesModel>
+
+@{
+    ViewData["Title"] = "Feauture";
+}
+
+<div class="container">
+    <div class="row">
+        @foreach (FeaturesModel featuresModel in Model)
+        {
+            <div class="col-sm-4 text-center feature">
+                <i class="@featuresModel.Icon"></i>
+                <h3>@featuresModel.Title</h3>
+                <p>
+                    @featuresModel.Description   
+                </p>
+            </div>
+        }
+
+    </div>
+</div>
